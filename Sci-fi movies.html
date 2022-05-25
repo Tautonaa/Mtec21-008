@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+      <title>Galaxy Theaters</title>
+      <link rel="stylesheet" href="https://cdn.jsdeliver.net/npm/boxicons@latest/css/boxicons.min.css">
+   <style>
+      *{
+      margin: 0px;
+      padding: 0px;
+  }
+  body{
+     background-color: #000000f3;   
+  }
+  .heading{
+      padding: 0px;
+      margin: 50px;
+      font-size: 0px;
+      color: rgb(229, 229, 238);
+  }
+  .header{
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('1512287.jpg');
+      background-size: cover;
+      background-position: center;
+  }
+  .container{
+      max-width: 1200px;
+      margin: o auto;
+      padding: 0 100px;
+  }
+  .navbar{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 0;
+  }
+  nav{
+      flex:1;
+      text-align: right;
+  }
+  .logo{
+      width: 120px;
+      cursor: pointer;
+  }
+  .user-profile{
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  }
+  nav ul li{
+      display: inline-block;
+      list-style: none;
+      margin-left: 30px;
+  }
+  nav ul li a{
+      text-decoration: none;
+      color: #fff;
+      font-size: 13px;
+      padding: 5px 2px;
+  }
+  nav ul li a:hover{
+      border-bottom: 5px solid #ff6b3f;
+  }
+  .content{
+      max-width: 600px;
+      color: #fff;
+      margin-top: 15%;
+  }
+  h1{
+      font-size: 56px;
+      line-height: 70px;
+      letter-spacing: 1px;
+      margin: 15px 0;
+  }
+  p{
+     font-size: 20px;
+     line-height: 22px; 
+  }
+  span{
+      color: #ff6b3f;
+  }
+  .btn-box{
+      margin-top: 20px;
+  }
+  button{
+      width: 150px;
+      border: 5px solid #ff6b3f;
+      color: #fff;
+      padding: 10px; 
+      margin-right: 10px;
+      border-radius: 25px;
+      cursor: pointer;
+      background:#ff6b3f;
+  }
+  .btn{
+      border: 5px solid #fff;
+      background: transparent;
+  }
+  .footer-container{
+      max-width: 1170px;
+      margin:auto;
+  }
+  .row{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  ul{
+      list-style: none;
+  }
+  .movies-container{
+    max-width: 968px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px, auto)) ;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .box .box-img{
+    width: 100%;
+    height: 270px;
+  }
+  .box .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .box .box-img img:hover{
+    transform: translateY(-15px);
+    transition: 0.8s all linear;
+  }
+  .box h3{
+    font-size: 0.9rem;
+    font-weight:500;
+   }
+  .box span{
+    font-size: 13px;
+  } 
+  .comingsoon{
+    max-width: 968px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px, auto)) ;
+    gap: 1rem;
+    margin-top: 2rem;  
+  }
+  .new{
+      max-width: 968px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px, auto)) ;
+    gap: 1rem;
+    margin-top: 2rem;  
+  }
+  
+  .footer{
+      background-color: #24262b;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+  }
+  .footer-col h4::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+      margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+      color: #ffffff;
+      padding-left: 8px;
+  }
+  .footer-col .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255,255,255,0.2);
+      margin:0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+      color: #24262b;
+      background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+          </style>
+  </head>
+  <body>
+  <section>
+  <div class="header">
+      <div class="container">
+  <div class="navbar">
+    <img src="Galaxy Theaters.png" class="logo">  
+    <nav>
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Coming Soon</a></li>
+          <li><a href="#">New Releases</a></li>
+          <li><a href="#">Genre</a></li>
+      </ul>
+    </nav>
+    <img src=" " class="user-profile">
+  </div>
+  </div>
+      </div>
+  </section>
+  
+  <h2 class="heading">Showing now</h2>
+  <section class="movies-container" id="movies">
+    <div class="movie-container">
+      <!--box1-->
+      <div class="box">
+        <div class="box-img">
+            <img src="Sci-fi/free-guy-2021-movie-poster-139x200.jpg" alt="Free guy">
+      </div>
+      <h3>Free guy 2021</h3>
+      <span>120min | Sci-fi/Comedy </span>
+      </div>
+    </div>
+  
+    <!--box2-->
+    <div class="box">
+        <div class="box-img">
+            <img src="Sci-fi/the-matrix-resurrections-2021-movie-poster-image-304x450.jpg" alt="The Matrix Resurrctions 2021">
+      </div>
+      <h3>The Matrix Resurrctions 2021</h3>
+      <span>120min | Sci-fi </span>
+      </div>
+    </div>
+  
+    <!--box3-->
+    <div class="box">
+        <div class="box-img">
+            <img src="Sci-fi/wallpaperflare.com_wallpaper (1).jpg" alt="Godzilla">
+      </div>
+      <h3>Godzilla</h3>
+      <span>12omin|Sci-fi </span>
+      </div>
+    </div>
+  
+  <!--box4-->
+    <div class="box">
+        <div class="box-img">
+            <img src="Sci-fi/510dcbb9c2e75bad47130d5b4446c1e6.jpg" alt="Back To The Future">
+      </div>
+      <h3>Back To The Future</h3>
+      <span> 12omin| Sci-fi</span>
+      </div>
+    </div>
+  
+  <!--box5-->
+    <div class="box">
+        <div class="box-img">
+            <img src="Sci-fi/283007683_5255391734552544_1221322536459960195_n.jpg" alt="Black Adam">
+      </div>
+      <h3>Black Adam</h3>
+      <span> 120min| Sci-fi </span>
+      </div>
+    </div>
+  </section><br>
+  
+  <h2 class="heading">Cooming soon</h2>
+  <section class="comingsoon" id="comingsoon">
+    <div class="comingsoon-container">
+      <!--box1-->
+      <div class="box">
+        <div class="box-img">
+            <img src="Sci-fi/917610.jpg" alt="Black Panther">
+      </div>
+      <h3>Black Panther</h3>
+      <span>120min | Sci-fi </span>
+      </div>
+    </div>
+  
+    <!--box2-->
+    <div class="box">
+        <div class="box-img">
+            <img src="Sci-fi/wallpaperflare.com_wallpaper (2).jpg" alt="Godzilla vs Kong">
+      </div>
+      <h3>Godzilla vs Kong</h3>
+      <span>120min | Sci-fi </span>
+      </div>
+    </div>
+  
+    <!--box3-->
+    <div class="box">
+        <div class="box-img">
+            <img src="Sci-fi/e175bf3460f7f28db9e47e87a92b9e59.jpg" alt="Interstellar">
+      </div>
+      <h3>Interstellar</h3>
+      <span>120min | Sci-fi </span>
+      </div>
+    </div>
+  
+  <!--box4-->
+    <div class="box">
+        <div class="box-img">
+            <img src="Sci-fi/f0ebd6d772eaa8221f7b9ab82f4e41a5.jpg" alt="Star wars">
+      </div>
+      <h3>Star wars/h3>
+      <span> 120min| Sci-fi </span>
+      </div>
+    </div>
+  
+  <!--box5-->
+    <div class="box">
+        <div class="box-img">
+            <img src="Sci-fi/f89c8b0c907c3497ab33c8e0c6ef0920.jpg" alt="Terminator">
+      </div>
+      <h3>Terminator</h3>
+      <span> 120min | Sci-fi </span>
+      </div>
+    </div>
+  </section><br>
+  
+ 
+      <footer class="footer">
+          <div class="footer-container">
+              <div class="row">
+                  <div class="footer-col">
+                      <h4>company</h4>
+                      <ul>
+                          <li><a href="#">about us</a></li>
+                          <li><a href="#">our services</a></li>
+                          <li><a href="#">privacy policy</a></li>
+                          <li><a href="#">affiliate program</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>get help</h4>
+                      <ul>
+                          <li><a href="#">FAQ</a></li>
+                          <li><a href="#">shipping</a></li>
+                          <li><a href="#">returns</a></li>
+                          <li><a href="#">order status</a></li>
+                          <li><a href="#">payment options</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>online shop</h4>
+                      <ul>
+                          <li><a href="#">watch</a></li>
+                          <li><a href="#">bag</a></li>
+                          <li><a href="#">shoes</a></li>
+                          <li><a href="#">dress</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>follow us</h4>
+                      <div class="social-links">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  
+  </body>
+  </html>

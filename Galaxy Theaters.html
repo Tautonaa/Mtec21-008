@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width,initial scale=1.0">
     <title>Galaxy Theaters</title>
     <link rel="stylesheet" href="https://cdn.jsdeliver.net/npm/boxicons@latest/css/boxicons.min.css">
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
  <style>
     *{
     margin: 0px;
     padding: 0px;
 }
+body{
+   background-color: #000000f3;   
+}
+.heading{
+    padding: 0px;
+    margin: 50px;
+    font-size: 0px;
+    color: rgb(229, 229, 238);
+}
 .header{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('pexels-pixabay-33129.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('1512287.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -103,6 +111,54 @@ button{
 ul{
 	list-style: none;
 }
+.movies-container{
+  max-width: 968px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px, auto)) ;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.box .box-img{
+  width: 100%;
+  height: 270px;
+}
+.box .box-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box .box-img img:hover{
+  transform: translateY(-15px);
+  transition: 0.8s all linear;
+}
+.box h3{
+  font-size: 0.9rem;
+  font-weight:500;
+ }
+.box span{
+  font-size: 13px;
+} 
+.comingsoon{
+  max-width: 968px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px, auto)) ;
+  gap: 1rem;
+  margin-top: 2rem;  
+}
+.new{
+    max-width: 968px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px, auto)) ;
+  gap: 1rem;
+  margin-top: 2rem;  
+}
+
 .footer{
 	background-color: #24262b;
     padding: 70px 0;
@@ -182,7 +238,7 @@ ul{
 <div class="header">
     <div class="container">
 <div class="navbar">
-  <img src="" class="logo">  
+  <img src="Galaxy Theaters.png" class="logo">  
   <nav>
     <ul>
         <li><a href="#">Home</a></li>
@@ -196,6 +252,170 @@ ul{
 </div>
     </div>
 </section>
+
+<h2 class="heading">Showing now</h2>
+<section class="movies-container" id="movies">
+  <div class="movie-container">
+    <!--box1-->
+    <div class="box">
+      <div class="box-img">
+          <img src="Action/Sci-fi/free-guy-2021-movie-poster-139x200.jpg" alt="Free guy">
+    </div>
+    <h3>Free guy 2021</h3>
+    <span>120min | Sci-fi/Comedy </span>
+    </div>
+  </div>
+
+  <!--box2-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Action/Sci-fi/the-matrix-resurrections-2021-movie-poster-image-304x450.jpg" alt="The Matrix Resurrctions 2021">
+    </div>
+    <h3>The Matrix Resurrctions 2021</h3>
+    <span>120min | Sci-fi </span>
+    </div>
+  </div>
+
+  <!--box3-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Horror/don-t-breathe-2-2021-movie-poster-159x200.jpg" alt="Don't Breath2 2021">
+    </div>
+    <h3>Don't Breath2 2021</h3>
+    <span>Don't Breath2 2021 | Horror </span>
+    </div>
+  </div>
+
+<!--box4-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Anime/0e3060b6db6e1c1489857508307cbdf6.jpg" alt="Space Jam">
+    </div>
+    <h3>Space Jam</h3>
+    <span> Space Jam | Animation </span>
+    </div>
+  </div>
+
+<!--box5-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Action/Sci-fi/f0ebd6d772eaa8221f7b9ab82f4e41a5.jpg" alt="Star Wars">
+    </div>
+    <h3>Star Wars</h3>
+    <span> Star Wars | Sci-fi </span>
+    </div>
+  </div>
+</section><br>
+
+<h2 class="heading">Cooming soon</h2>
+<section class="comingsoon" id="comingsoon">
+  <div class="comingsoon-container">
+    <!--box1-->
+    <div class="box">
+      <div class="box-img">
+          <img src="Action/Sci-fi/free-guy-2021-movie-poster-139x200.jpg" alt="Free guy">
+    </div>
+    <h3>Free guy 2021</h3>
+    <span>120min | Sci-fi/Comedy </span>
+    </div>
+  </div>
+
+  <!--box2-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Action/Sci-fi/the-matrix-resurrections-2021-movie-poster-image-304x450.jpg" alt="The Matrix Resurrctions 2021">
+    </div>
+    <h3>The Matrix Resurrctions 2021</h3>
+    <span>120min | Sci-fi </span>
+    </div>
+  </div>
+
+  <!--box3-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Horror/don-t-breathe-2-2021-movie-poster-159x200.jpg" alt="Don't Breath2 2021">
+    </div>
+    <h3>Don't Breath2 2021</h3>
+    <span>Don't Breath2 2021 | Horror </span>
+    </div>
+  </div>
+
+<!--box4-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Anime/0e3060b6db6e1c1489857508307cbdf6.jpg" alt="Space Jam">
+    </div>
+    <h3>Space Jam</h3>
+    <span> Space Jam | Animation </span>
+    </div>
+  </div>
+
+<!--box5-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Action/Sci-fi/f0ebd6d772eaa8221f7b9ab82f4e41a5.jpg" alt="Star Wars">
+    </div>
+    <h3>Star Wars</h3>
+    <span> Star Wars | Sci-fi </span>
+    </div>
+  </div>
+</section><br>
+
+<h2 class="heading">New Releases</h2>
+<section class="new" id="new">
+  <div class="newRealeas-container">
+    <!--box1-->
+    <div class="box">
+      <div class="box-img">
+          <img src="Action/Sci-fi/free-guy-2021-movie-poster-139x200.jpg" alt="Free guy">
+    </div>
+    <h3>Free guy 2021</h3>
+    <span>120min | Sci-fi/Comedy </span>
+    </div>
+  </div>
+
+  <!--box2-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Action/Sci-fi/the-matrix-resurrections-2021-movie-poster-image-304x450.jpg" alt="The Matrix Resurrctions 2021">
+    </div>
+    <h3>The Matrix Resurrctions 2021</h3>
+    <span>120min | Sci-fi </span>
+    </div>
+  </div>
+
+  <!--box3-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Horror/don-t-breathe-2-2021-movie-poster-159x200.jpg" alt="Don't Breath2 2021">
+    </div>
+    <h3>Don't Breath2 2021</h3>
+    <span>Don't Breath2 2021 | Horror </span>
+    </div>
+  </div>
+
+<!--box4-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Anime/0e3060b6db6e1c1489857508307cbdf6.jpg" alt="Space Jam">
+    </div>
+    <h3>Space Jam</h3>
+    <span> Space Jam | Animation </span>
+    </div>
+  </div>
+
+<!--box5-->
+  <div class="box">
+      <div class="box-img">
+          <img src="Action/Sci-fi/f0ebd6d772eaa8221f7b9ab82f4e41a5.jpg" alt="Star Wars">
+    </div>
+    <h3>Star Wars</h3>
+    <span> Star Wars | Sci-fi </span>
+    </div>
+  </div>
+</section><br>
+
+
 
     <footer class="footer">
         <div class="footer-container">
